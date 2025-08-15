@@ -33,27 +33,33 @@ export default function LoginPage({ difficulty, setDifficulty }) {
 
   return (
     <div className="login-container">
-      <div>
-        <h1>Legends of Memory</h1>
+      <div className="login-header">
+        <h1>Memory Legends</h1>
+        <h2>A Memory Challenge</h2>
+      </div>
+      <div className="login-form">
         <label htmlFor="getPlayerName">
           <input type="text" id="getPlayerName" placeholder="Player's Name" />
         </label>
         <div className="choose-difficulty">
-          <button
-            className="prvious-difficulty"
-            onClick={(e) => handleChangeDiff(e)}
-          >
-            <ChevronsLeft />
-          </button>
-          <p>{difficulty}</p>
-          <button
-            className="next-difficulty"
-            onClick={(e) => handleChangeDiff(e)}
-          >
-            <ChevronsRight />
-          </button>
+          <h3>Choose Difficulty</h3>
+          <div className="change-dif-button btn orange-button">
+            <button
+              className="prvious-difficulty"
+              onClick={(e) => handleChangeDiff(e)}
+            >
+              <ChevronsLeft />
+            </button>
+            <p>{difficulty}</p>
+            <button
+              className="next-difficulty"
+              onClick={(e) => handleChangeDiff(e)}
+            >
+              <ChevronsRight />
+            </button>
+          </div>
         </div>
-        <button className="start-game">Start</button>
+        <button className="start-game btn orange-button">Start</button>
       </div>
     </div>
   );
