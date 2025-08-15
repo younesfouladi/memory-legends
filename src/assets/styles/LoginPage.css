@@ -7,7 +7,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 0;
+  gap: 3rem;
+  justify-content: center;
 }
 
 .login-container .login-header {
@@ -31,7 +32,7 @@
 
 .login-container .login-form {
   background: url("../../../images/elements/login-form.webp");
-  background-size: contain;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -39,7 +40,7 @@
   gap: 3rem;
   justify-content: center;
   align-items: center;
-  padding: 5rem;
+  padding: 7rem 3rem 5rem 3rem;
 }
 
 .login-form .choose-difficulty {
@@ -47,7 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .login-form .choose-difficulty div {
@@ -55,4 +56,8 @@
   align-items: center;
   gap: 1rem;
   text-transform: uppercase;
+}
+
+.login-form .choose-difficulty div button {
+  cursor: pointer;
 }

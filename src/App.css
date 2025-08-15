@@ -17,4 +17,5 @@ body {
   height: 100%;
   font-family: var(--primary-font);
   color: var(--white-color);
+  user-select: none;
 }

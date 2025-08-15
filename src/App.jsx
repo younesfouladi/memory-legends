@@ -11,14 +11,19 @@ function App() {
     points: 0,
     record: 0,
   });
-
+  const [isGameStarted, setIsGameStarted] = useState(false);
+  console.log(isGameStarted);
   return (
     <div id="container">
-      <LoginPage
-        difficulty={difficulty}
-        setDifficulty={setDifficulty}
-        setPlayerInfo={setPlayerInfo}
-      />
+      {!isGameStarted ? (
+        <LoginPage
+          difficulty={difficulty}
+          setDifficulty={setDifficulty}
+          setPlayerInfo={setPlayerInfo}
+          playerInfo={playerInfo}
+          setIsGameStarted={setIsGameStarted}
+        />
+      ) : null}
     </div>
   );
 }

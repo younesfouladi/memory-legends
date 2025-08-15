@@ -24,12 +24,65 @@ h3 {
   outline: none;
   color: var(--white-color);
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .orange-button {
   background: url("../../../images/elements/orange-button.webp");
   background-position: center;
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 5rem;
+  padding: 1rem 3rem;
+}
+
+.green-button {
+  background: url("../../../images/elements/green-button.webp");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 1.5rem 3rem;
+}
+
+input {
+  background: url("../../../images/elements/border-input.webp");
+  border: none;
+  background-size: 100% 100%;
+  background-position: center;
+  color: var(--white-color);
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.infinite-move-left-animation {
+  animation: x-left-move 0.5s infinite alternate;
+}
+
+.infinite-move-right-animation {
+  animation: x-right-move 0.5s infinite alternate;
+}
+
+@keyframes x-left-move {
+  0% {
+    transform: translateX(0);
+
+    color: #f8db3d;
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
+
+@keyframes x-right-move {
+  0% {
+    transform: translateX(0);
+
+    color: #f8db3d;
+  }
+  100% {
+    transform: translateX(5%);
+  }
 }
