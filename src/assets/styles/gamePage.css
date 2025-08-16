@@ -7,9 +7,12 @@
   display: flex;
   flex-direction: column;
   padding: 3rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .game-container header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,4 +85,36 @@
   align-items: center;
   width: 100%;
   justify-content: space-between;
+}
+
+/* Scorebar */
+.game-container .scorebar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.game-container .scorebar-container .scorebar {
+  background: url("../../../images/elements/scores.webp");
+  background-size: 100% 100%;
+  width: clamp(50rem, 50vw, 60vw);
+  aspect-ratio: 16 / 2.5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+  .game-container .scorebar-container .scorebar {
+    aspect-ratio: 16 / 3;
+  }
+}
+
+.game-container .scorebar-container .scorebar > div {
+  width: 50%;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
 }

@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.3rem, 1.5vw, 3vw);
+  font-size: clamp(1.1rem, 1.5vw, 3vw);
 }
 
 .btn {
