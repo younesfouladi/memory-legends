@@ -15,20 +15,21 @@ export default function LoginPage({
   const difRef = useRef(null);
 
   // Login Page Heading Animation
+  SplitText.create(".login-header", {
+    type: "words, chars",
+    mask: "lines",
+    autoSplit: true,
+    onSplit(self) {
+      return gsap.from(self.words, {
+        duration: 1,
+        y: -100,
+        autoAlpha: 0,
+        stagger: 0.05,
+      });
+    },
+  });
+
   useGSAP(() => {
-    SplitText.create(".login-header", {
-      type: "words, chars",
-      mask: "lines",
-      autoSplit: true,
-      onSplit(self) {
-        return gsap.from(self.words, {
-          duration: 1,
-          y: -100,
-          autoAlpha: 0,
-          stagger: 0.05,
-        });
-      },
-    });
     setTimeout(() => {
       gsap.fromTo(
         ".login-header",
