@@ -1,9 +1,7 @@
 import "../../assets/styles/LoginPage.css";
-import { ChevronsRight, ChevronsLeft, User } from "lucide-react";
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
+import { ChevronsRight, ChevronsLeft } from "lucide-react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { SplitText } from "gsap/SplitText";
 
 export default function LoginPage({
   difficulty,
@@ -14,22 +12,8 @@ export default function LoginPage({
 }) {
   const difRef = useRef(null);
 
-  // Login Page Heading Animation
-  SplitText.create(".login-header", {
-    type: "words, chars",
-    mask: "lines",
-    autoSplit: true,
-    onSplit(self) {
-      return gsap.from(self.words, {
-        duration: 1,
-        y: -100,
-        autoAlpha: 0,
-        stagger: 0.05,
-      });
-    },
-  });
-
-  useGSAP(() => {
+  useEffect(() => {
+    // Login Page Heading Animation
     setTimeout(() => {
       gsap.fromTo(
         ".login-header",
@@ -37,19 +21,16 @@ export default function LoginPage({
         { scale: 1.1, duration: 1, repeat: -1 }
       );
     }, 1000);
-  }, []);
 
-  // difficulty change Animation
-  useGSAP(() => {
+    gsap.fromTo(".login-header", { y: -100 }, { y: 0, duration: 1 });
+
+    // difficulty change Animation
     gsap.fromTo(
       difRef.current,
       { y: -10, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.5 }
     );
-  }, [difficulty]);
-
-  // Login Form Entry Animation
-  useGSAP(() => {
+    // Login Form Entry Animation
     gsap.fromTo(
       ".login-form",
       { y: 200, opacity: 0 },
