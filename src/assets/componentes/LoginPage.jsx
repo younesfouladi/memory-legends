@@ -110,7 +110,7 @@ export default function LoginPage({
             >
               <ChevronsLeft
                 size={34}
-                className="infinite-move-left-animation "
+                className="infinite-move-left-animation pointer-events-none"
               />
             </button>
             <p ref={difRef}>{difficulty}</p>
@@ -120,7 +120,7 @@ export default function LoginPage({
             >
               <ChevronsRight
                 size={34}
-                className="infinite-move-right-animation "
+                className="infinite-move-right-animation pointer-events-none"
               />
             </button>
           </div>
