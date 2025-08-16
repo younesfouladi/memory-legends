@@ -25,6 +25,8 @@ h3 {
   color: var(--white-color);
   font-size: 1.5rem;
   cursor: pointer;
+  height: fit-content;
+  width: fit-content;
 }
 
 .orange-button {

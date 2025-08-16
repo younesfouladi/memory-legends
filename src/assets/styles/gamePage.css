@@ -1,0 +1,49 @@
+.game-container {
+  width: 100%;
+  height: 100%;
+  background: url("../images/background/main-background.webp");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.game-container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-container header .player-container {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.game-container header .player-container span {
+  background: url("../../../images/elements/image-boarder.webp");
+  background-size: 100% 100%;
+  max-width: 100px;
+  padding: 0.3rem 0.6rem 0.3rem 0.7rem;
+}
+
+.game-container header .player-container span img {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #0d152e93;
+}
+
+.game-container header .player-container p {
+  background: url("../../../images/elements/name-boarder.webp");
+  background-size: 100% 100%;
+  padding: 1rem 7rem 1rem 1rem;
+  margin-left: -5px;
+}
+
+.game-container header .settings-button {
+  border: 2px solid #e2e3dd;
+  border-radius: 50%;
+  padding: 0.5rem;
+}

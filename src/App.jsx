@@ -3,6 +3,7 @@ import "./assets/styles/reset.css";
 import "./assets/styles/utilities.css";
 import LoginPage from "./assets/componentes/LoginPage.jsx";
 import { useState } from "react";
+import GamePage from "./assets/componentes/gamePage.jsx";
 
 function App() {
   const [difficulty, setDifficulty] = useState("easy");
@@ -12,7 +13,6 @@ function App() {
     record: 0,
   });
   const [isGameStarted, setIsGameStarted] = useState(false);
-  console.log(isGameStarted);
   return (
     <div id="container">
       {!isGameStarted ? (
@@ -23,7 +23,9 @@ function App() {
           playerInfo={playerInfo}
           setIsGameStarted={setIsGameStarted}
         />
-      ) : null}
+      ) : (
+        <GamePage playerInfo={playerInfo} />
+      )}
     </div>
   );
 }

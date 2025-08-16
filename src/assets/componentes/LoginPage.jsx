@@ -12,7 +12,6 @@ export default function LoginPage({
   setPlayerInfo,
   setIsGameStarted,
 }) {
-  console.log(playerInfo);
   const difRef = useRef(null);
 
   // Login Page Heading Animation
