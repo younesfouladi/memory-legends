@@ -7,7 +7,6 @@ export default function GameHeader({ playerInfo }) {
 
   function handleOpenSoundDrawer(e) {
     if (soundDrawerRef.current.style.display === "none") {
-      console.log(e.target);
       e.target.style.transform = "rotate(-45deg)";
       soundDrawerRef.current.style.display = "flex";
       gsap.fromTo(

@@ -6,7 +6,7 @@ export default function GameScorebar({ playerInfo }) {
           <h3>Score: {playerInfo.points}</h3>
         </div>
         <div className="highscore">
-          <h3>Score: {playerInfo.record}</h3>
+          <h3>Record: {playerInfo.record}</h3>
         </div>
       </div>
     </div>

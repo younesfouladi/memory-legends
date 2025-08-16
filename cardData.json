@@ -1,0 +1,146 @@
+[
+  {
+    "id": "d8025148-2263-4957-8120-ee0e7dc461c9",
+    "name": "Aatrox",
+    "description": "Aatrox was the first to find freedom once more, corrupting and transforming those foolish",
+    "imgSrc": "./images/cards/Aatrox.webp"
+  },
+  {
+    "id": "917c2788-d1fd-4a3e-a6ad-962576169377",
+    "name": "Akali",
+    "description": "Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need.",
+    "imgSrc": "./images/cards/Akali.webp"
+  },
+  {
+    "id": "c688a18e-a634-4624-b79a-3e06ae7ba7df",
+    "name": "Ambessa",
+    "description": "As a Noxian general, she embodies a deadly combination of ruthless strength and fearless resolve in battle",
+    "imgSrc": "./images/cards/Ambessa.webp"
+  },
+  {
+    "id": "f3e6fd5f-ec80-4d27-8ab5-876da7a71cef",
+    "name": "Aphelios",
+    "description": "Emerging from moonlight's shadow with weapons drawn, Aphelios kills the enemies of his faith in brooding silence",
+    "imgSrc": "./images/cards/Aphelios.webp"
+  },
+  {
+    "id": "dfe36ef1-09f7-4be3-9e05-4d9d268bd118",
+    "name": "Ekko",
+    "description": "A prodigy from the rough streets of Zaun, Ekko is able to manipulate time to twist any situation to his advantage",
+    "imgSrc": "./images/cards/Ekko.webp"
+  },
+  {
+    "id": "6476a7e7-8460-48a7-bbde-1d1617093704",
+    "name": "Hecarim",
+    "description": "Hecarim is a spectral fusion of man and beast, cursed to ride down the souls of the living for all eternity.",
+    "imgSrc": "./images/cards/Hecarim.webp"
+  },
+  {
+    "id": "b397f1a1-7384-4384-8c77-e9f529e90254",
+    "name": "Jinx",
+    "description": "An unhinged and impulsive criminal from the undercity, Jinx is haunted by the consequences of her past",
+    "imgSrc": "./images/cards/Jinx.webp"
+  },
+  {
+    "id": "e8c034b1-d7c3-4e3c-bd8e-6f38a3ae1443",
+    "name": "Nilah",
+    "description": "Nilah is an ascetic warrior from a distant land, seeking the world's deadliest, most titanic opponents so that she might challenge and destroy them.",
+    "imgSrc": "./images/cards/Nilah.webp"
+  },
+  {
+    "id": "f2902b2d-03fb-45cd-ac48-bc56453de8d0",
+    "name": "Pyke",
+    "description": "A renowned harpooner from the slaughter docks of Bilgewater, Pyke should have met his death in the belly of a gigantic jaull-fish",
+    "imgSrc": "./images/cards/Pyke.webp"
+  },
+  {
+    "id": "2077e7d4-b774-48c4-ad04-7d47390e0c97",
+    "name": "Thresh",
+    "description": "Thresh is an ambitious and restless specter of the Shadow Isles. Once the custodian of countless arcane secrets",
+    "imgSrc": "./images/cards/Thresh.webp"
+  },
+  {
+    "id": "d4202cd6-5d48-4f69-9704-5b3b8e70284a",
+    "name": "Vander",
+    "description": "Vander was a supporting character in Arcane. He was once the determined and zealous unspoken leader and protector of the undercity.",
+    "imgSrc": "./images/cards/Vander.webp"
+  },
+  {
+    "id": "1aa7080a-2cfb-44c0-b5d6-df0b6abfd553",
+    "name": "Vi",
+    "description": "Vi is a hotheaded, impulsive, and fearsome woman with very little respect for authority. She has always been a shrewd survivor.",
+    "imgSrc": "./images/cards/Vi.webp"
+  },
+  {
+    "id": "a6a62a9e-ac09-4e6d-bcc4-391c189fc9b8",
+    "name": "Kyubi",
+    "description": "A cunning spirit of fire and illusion, its nine tails dance like flickering flames.",
+    "imgSrc": "./images/cards/Kyubi.webp"
+  },
+  {
+    "id": "3f89de35-8173-4a4e-a810-823b40b817e2",
+    "name": "Chronos Sentinel",
+    "description": "An ancient guardian forged from brass and forgotten magic, its three eyes see past, present, and future.",
+    "imgSrc": "./images/cards/ChronosSentinel.webp"
+  },
+  {
+    "id": "9b4c9043-7a55-4cd4-bfb4-2df00bea4a38",
+    "name": "Argus",
+    "description": "A magnificent beast whose hundred-eyed plumage holds the secrets of the cosmos.",
+    "imgSrc": "./images/cards/Argus.webp"
+  },
+  {
+    "id": "d0eb351a-1ac6-4af7-a9f2-16584d3cdebd",
+    "name": "Morgrath",
+    "description": "A master of forbidden arts, he commands the very essence of darkness and despair.",
+    "imgSrc": "./images/cards/Morgrath.webp"
+  },
+  {
+    "id": "df1c3f52-4e6a-4124-9fb1-695d1c8c38eb",
+    "name": "Sol-Rishi",
+    "description": "An enlightened master whose body is a conduit for pure solar energy and ancient wisdom.",
+    "imgSrc": "./images/cards/Sol-Rishi.webp"
+  },
+  {
+    "id": "9465593f-7703-4d49-990a-ccb362fb6e6c",
+    "name": "Lyra",
+    "description": "A protector of the ancient woods, eternally bound to her spectral wolf companion.",
+    "imgSrc": "./images/cards/Lyra.webp"
+  },
+  {
+    "id": "737860fe-9b41-45c0-b659-93ede16c4b76",
+    "name": "Grizelda",
+    "description": "A cunning merchant whose insatiable greed for treasure is legendary in every marketplace.",
+    "imgSrc": "./images/cards/Grizelda.webp"
+  },
+  {
+    "id": "1686f272-dec0-4f8f-bf79-82f12c043a35",
+    "name": "Coralia",
+    "description": "A siren of the deep, her haunting songs lure sailors to their watery graves.",
+    "imgSrc": "./images/cards/Coralia.webp"
+  },
+  {
+    "id": "fb36f8f6-9951-45d7-b303-102023c8712e",
+    "name": "Alistair",
+    "description": "A brilliant inventor whose marvelous steam-powered creations defy the laws of nature.",
+    "imgSrc": "./images/cards/Alistair.webp"
+  },
+  {
+    "id": "d4916438-be49-4d7e-9989-6ded3c5c9340",
+    "name": "Pyralis",
+    "description": "A volatile elemental of pure, untamed fire, born from the world's molten core.",
+    "imgSrc": "./images/cards/Pyralis.webp"
+  },
+  {
+    "id": "0b6431eb-e072-4a73-99fe-c40d3f8a991b",
+    "name": "Gravewood",
+    "description": "A vengeful spirit of the ancient forest, its bark is iron and its roots drink the sorrow of the land.",
+    "imgSrc": "./images/cards/Gravewood.webp"
+  },
+  {
+    "id": "859d11ea-b9c8-43f6-a5da-3cb580e48e58",
+    "name": "K'tharr",
+    "description": "An ancient horror from a forgotten epoch, its slumbering presence poisons the minds of mortals.",
+    "imgSrc": "./images/cards/K-tharr.webp"
+  }
+]
