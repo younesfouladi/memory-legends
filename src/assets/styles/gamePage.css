@@ -42,8 +42,44 @@
   margin-left: -5px;
 }
 
-.game-container header .settings-button {
+.game-container header .sound-drawer-button {
   border: 2px solid #e2e3dd;
   border-radius: 50%;
   padding: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.game-container header .sound-setting {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+}
+
+.game-container header .sound-setting ul {
+  position: absolute;
+  list-style: none;
+  border: 2px solid #e2e3dd;
+  border-radius: 1rem;
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  bottom: -260%;
+  right: 0;
+  width: 150px;
+  transform-origin: top;
+}
+
+.game-container header .sound-setting ul li {
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
