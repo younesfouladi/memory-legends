@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import Card from "./card.jsx";
 
-export default function GameCards({ cardsData, difficulty }) {
+export default function GameCards({
+  cardsData,
+  difficulty,
+  playerInfo,
+  setPlayerInfo,
+}) {
   const [showBackofCard, setShowBackofCard] = useState(false);
 
   return (
@@ -11,6 +16,8 @@ export default function GameCards({ cardsData, difficulty }) {
         difficulty={difficulty}
         showBackofCard={showBackofCard}
         setShowBackofCard={setShowBackofCard}
+        playerInfo={playerInfo}
+        setPlayerInfo={setPlayerInfo}
       />
     </main>
   );
@@ -21,6 +28,8 @@ function GenerateCards({
   difficulty,
   showBackofCard,
   setShowBackofCard,
+  playerInfo,
+  setPlayerInfo,
 }) {
   const count = (() => {
     return difficulty === "easy"
@@ -33,21 +42,17 @@ function GenerateCards({
   })();
 
   const [selectedCard, setSelectedCard] = useState([]);
-  const [cards, setCards] = useState(cardsData);
-  const [round, setRound] = useState(0);
+  // const [cards, setCards] = useState(cardsData);
 
   useEffect(() => {
+    const cards = [...cardsData];
     const picked = [];
-    setCards((prev) => {
-      const av = [...prev];
-      for (let i = 0; i < count; i++) {
-        const idx = Math.floor(Math.random() * av.length);
-        picked.push(av.splice(idx, 1)[0]);
-      }
-      return av;
-    });
-    setSelectedCard((prev) => [...prev, ...picked]);
-  }, [round, count]);
+    for (let i = 0; i < count; i++) {
+      const idx = Math.floor(Math.random() * cards.length);
+      picked.push(cards.splice(idx, 1)[0]);
+    }
+    setSelectedCard(picked);
+  }, [playerInfo.points, count, cardsData]);
 
   return (
     <div className="card-container">
@@ -61,8 +66,11 @@ function GenerateCards({
             imgSrc={card.imgSrc}
             showBackofCard={showBackofCard}
             setShowBackofCard={setShowBackofCard}
-            round={round}
-            setRound={setRound}
+            playerInfo={playerInfo}
+            setPlayerInfo={setPlayerInfo}
+            cardsData={cardsData}
+            selectedCard={selectedCard}
+            setSelectedCard={setSelectedCard}
           />
         );
       })}

@@ -10,12 +10,11 @@ export default function Card({
   imgSrc,
   showBackofCard,
   setShowBackofCard,
-  round,
-  setRound,
+  playerInfo,
+  setPlayerInfo,
 }) {
   function handleCardClick(e) {
-    // Login
-    gameLogic(round, setRound);
+    if (showBackofCard) return;
     // Animations
     gsap.fromTo(
       ".card",
@@ -48,6 +47,8 @@ export default function Card({
           onStart: () => {
             setTimeout(() => {
               setShowBackofCard(false);
+              // Logic of Games
+              gameLogic(playerInfo, setPlayerInfo, e.target);
             }, 500);
           },
         }

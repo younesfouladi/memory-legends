@@ -11,6 +11,7 @@ function App() {
     name: "",
     points: 0,
     record: 0,
+    clickedCards: [],
   });
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [cardsData, setCardsData] = useState([]);
@@ -40,6 +41,7 @@ function App() {
       ) : (
         <GamePage
           playerInfo={playerInfo}
+          setPlayerInfo={setPlayerInfo}
           cardsData={cardsData}
           difficulty={difficulty}
         />
