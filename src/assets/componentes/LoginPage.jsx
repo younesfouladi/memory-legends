@@ -94,7 +94,9 @@ export default function LoginPage({
                 className="infinite-move-left-animation pointer-events-none"
               />
             </button>
-            <p ref={difRef}>{difficulty}</p>
+            <h3 ref={difRef} onClick={(e) => handleChangeDiff(e)}>
+              {difficulty}
+            </h3>
             <button
               className="next-difficulty btn"
               onClick={(e) => handleChangeDiff(e)}
