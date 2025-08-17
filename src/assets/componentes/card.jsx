@@ -2,6 +2,7 @@ import { gsap } from "gsap";
 import "atropos/css";
 import Atropos from "atropos/react";
 import gameLogic from "./GameLogic.jsx";
+import { useState } from "react";
 
 export default function Card({
   id,
@@ -14,8 +15,11 @@ export default function Card({
   setPlayerInfo,
   count,
 }) {
+  const [isAnimActive, setIsAnimActive] = useState(false);
+
   function handleCardClick(e) {
-    if (showBackofCard) return;
+    if (isAnimActive) return;
+    setIsAnimActive(true);
     // Animations
     gsap.fromTo(
       ".card",
