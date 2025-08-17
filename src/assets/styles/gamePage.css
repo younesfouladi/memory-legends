@@ -155,13 +155,13 @@
   text-align: justify;
   text-justify: auto;
   margin: 1.1rem 1.3rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 40%, transparent 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
   backdrop-filter: blur(2px);
   animation: slide-in 1 0.5s alternate;
   transform-origin: bottom;
 }
 
-.game-container .card-container .card .front:hover .card-details {
+.game-container .card-container .card:hover .card-details {
   display: flex;
 }
 
