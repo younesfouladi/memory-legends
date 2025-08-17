@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import "atropos/css";
 import Atropos from "atropos/react";
+import gameLogic from "./GameLogic.jsx";
 
 export default function Card({
   id,
@@ -9,8 +10,13 @@ export default function Card({
   imgSrc,
   showBackofCard,
   setShowBackofCard,
+  round,
+  setRound,
 }) {
   function handleCardClick(e) {
+    // Login
+    gameLogic(round, setRound);
+    // Animations
     gsap.fromTo(
       ".card",
       { rotateY: 0 },

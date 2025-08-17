@@ -61,6 +61,8 @@ function GenerateCards({
             imgSrc={card.imgSrc}
             showBackofCard={showBackofCard}
             setShowBackofCard={setShowBackofCard}
+            round={round}
+            setRound={setRound}
           />
         );
       })}
