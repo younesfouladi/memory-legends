@@ -21,7 +21,6 @@
 .game-container header .player-container {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -43,6 +42,7 @@
   background-size: 100% 100%;
   padding: 1rem 7rem 1rem 1rem;
   margin-left: -5px;
+  font-size: clamp(1.2rem, 1.2vw, 2rem);
 }
 
 .game-container header .sound-drawer-button {
@@ -98,7 +98,7 @@
   background: url("../../../images/elements/scores.webp");
   background-size: 100% 100%;
   width: clamp(50rem, 50vw, 60vw);
-  aspect-ratio: 16 / 2.5;
+  aspect-ratio: 16 / 2.2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,7 +120,6 @@
 }
 
 /* Card Styles */
-
 .game-container > main {
   display: flex;
   justify-content: center;
@@ -178,4 +177,19 @@
 
 .card-container .card .back.active {
   display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .game-container {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .game-container {
+    padding: 1rem;
+  }
+  .game-container header .player-container p {
+    padding-right: 4rem;
+  }
 }

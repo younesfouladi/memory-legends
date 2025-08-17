@@ -15,7 +15,11 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.1rem, 1.5vw, 3vw);
+  font-size: clamp(1.3rem, 1.5vw, 4rem);
+}
+
+p {
+  font-size: clamp(1rem, 1vw, 2rem);
 }
 
 .btn {
@@ -35,6 +39,7 @@ h3 {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding: 1rem 3rem;
+  font-size: clamp(1.2rem, 1.5vw, 4rem);
 }
 
 .green-button {
@@ -43,6 +48,7 @@ h3 {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding: 1.5rem 3rem;
+  font-size: clamp(1.2rem, 1.5vw, 4rem);
 }
 
 input {
@@ -52,7 +58,11 @@ input {
   background-position: center;
   color: var(--white-color);
   padding: 1rem 2rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  text-align: center;
+  font-size: clamp(1.3rem, 1.5vw, 3vw);
+  width: 100%;
+  aspect-ratio: 16 / 3;
 }
 
 input:focus {

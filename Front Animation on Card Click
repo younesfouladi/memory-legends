@@ -1,3 +1,0 @@
-[main ee6e629] Fixed Card Selection BUGS, Created Card's Front/back Styles, Added Hover 3D Animation to The Cards, Added Rotate Cards FRONT
- 6 files changed, 145 insertions(+), 20 deletions(-)
- create mode 100644 src/assets/componentes/card.jsx

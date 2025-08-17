@@ -73,16 +73,15 @@ export default function LoginPage({
         <h2>A Memory Challenge</h2>
       </div>
       <div className="login-form">
-        <label htmlFor="getPlayerName">
-          <input
-            type="text"
-            id="getPlayerName"
-            placeholder="Enter player's name"
-            onChange={(e) => {
-              setPlayerInfo({ ...playerInfo, name: e.target.value });
-            }}
-          />
-        </label>
+        <input
+          type="text"
+          id="getPlayerName"
+          placeholder="Enter player's name"
+          onChange={(e) => {
+            setPlayerInfo({ ...playerInfo, name: e.target.value });
+          }}
+        />
+
         <div className="choose-difficulty">
           <h3>Choose Difficulty</h3>
           <div className="change-dif-button btn green-button">
