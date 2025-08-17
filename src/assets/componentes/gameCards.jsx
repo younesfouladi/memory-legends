@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function GameCards({ cardsData, difficulty }) {
   return (
@@ -26,9 +26,6 @@ function Card({ id, name, description, imgSrc }) {
 }
 
 function GenerateCards({ cardsData, difficulty }) {
-  const [cards, setCards] = useState(cardsData);
-  const [selectedCard, setSelectedCard] = useState([]);
-
   const count = (() => {
     return difficulty === "easy"
       ? 3
@@ -39,17 +36,22 @@ function GenerateCards({ cardsData, difficulty }) {
       : null;
   })();
 
+  const [selectedCard, setSelectedCard] = useState([]);
+  const [cards, setCards] = useState(cardsData);
+  const [round, setRound] = useState(0);
+
   useEffect(() => {
-    return () => {
+    const picked = [];
+    setCards((prev) => {
+      const av = [...prev];
       for (let i = 0; i < count; i++) {
-        const randomIndex = Math.floor(Math.random() * cards.length);
-        setCards((prev) => {
-          return prev.filter((item) => item.id !== cards[randomIndex].id);
-        });
-        setSelectedCard((prev) => [...prev, cardsData[randomIndex]]);
+        const idx = Math.floor(Math.random() * av.length);
+        picked.push(av.splice(idx, 1)[0]);
       }
-    };
-  }, [cardsData]);
+      return av;
+    });
+    setSelectedCard((prev) => [...prev, ...picked]);
+  }, [round, count]);
 
   return (
     <div className="card-container">
