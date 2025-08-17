@@ -1,31 +1,27 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import Card from "./card.jsx";
 
 export default function GameCards({ cardsData, difficulty }) {
+  const [showBackofCard, setShowBackofCard] = useState(false);
+
   return (
     <main>
-      <GenerateCards cardsData={cardsData} difficulty={difficulty} />
+      <GenerateCards
+        cardsData={cardsData}
+        difficulty={difficulty}
+        showBackofCard={showBackofCard}
+        setShowBackofCard={setShowBackofCard}
+      />
     </main>
   );
 }
 
-function Card({ id, name, description, imgSrc }) {
-  return (
-    <div className="card" data-id={id}>
-      <div className="front">
-        <img src={imgSrc} alt="front of card" />
-        <div className="card-details">
-          <h3 className="card-name">{name}</h3>
-          <p className="card-description">{description}</p>
-        </div>
-      </div>
-      <div className="back">
-        <img src="../../images/cards/back.webp" alt="Back of Card" />
-      </div>
-    </div>
-  );
-}
-
-function GenerateCards({ cardsData, difficulty }) {
+function GenerateCards({
+  cardsData,
+  difficulty,
+  showBackofCard,
+  setShowBackofCard,
+}) {
   const count = (() => {
     return difficulty === "easy"
       ? 3
@@ -63,6 +59,8 @@ function GenerateCards({ cardsData, difficulty }) {
             name={card.name}
             description={card.description}
             imgSrc={card.imgSrc}
+            showBackofCard={showBackofCard}
+            setShowBackofCard={setShowBackofCard}
           />
         );
       })}
