@@ -11,6 +11,8 @@ function App() {
     name: "",
     points: 0,
     record: 0,
+    gameOver: false,
+    result: "",
     clickedCards: [],
   });
   const [isGameStarted, setIsGameStarted] = useState(false);

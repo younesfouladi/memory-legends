@@ -12,6 +12,7 @@ export default function Card({
   setShowBackofCard,
   playerInfo,
   setPlayerInfo,
+  count,
 }) {
   function handleCardClick(e) {
     if (showBackofCard) return;
@@ -48,7 +49,13 @@ export default function Card({
             setTimeout(() => {
               setShowBackofCard(false);
               // Logic of Games
-              gameLogic(playerInfo, setPlayerInfo, e.target);
+              setPlayerInfo((prev) =>
+                gameLogic(
+                  prev,
+                  e.target.closest(".card").getAttribute("data-id"),
+                  count
+                )
+              );
             }, 500);
           },
         }

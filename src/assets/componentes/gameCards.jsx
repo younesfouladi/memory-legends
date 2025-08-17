@@ -42,7 +42,6 @@ function GenerateCards({
   })();
 
   const [selectedCard, setSelectedCard] = useState([]);
-  // const [cards, setCards] = useState(cardsData);
 
   useEffect(() => {
     const cards = [...cardsData];
@@ -71,6 +70,7 @@ function GenerateCards({
             cardsData={cardsData}
             selectedCard={selectedCard}
             setSelectedCard={setSelectedCard}
+            count={count}
           />
         );
       })}

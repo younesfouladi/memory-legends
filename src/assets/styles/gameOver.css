@@ -1,0 +1,8 @@
+.gameover-container {
+  background-color: rgb(26, 41, 68);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

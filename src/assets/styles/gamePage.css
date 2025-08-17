@@ -151,7 +151,7 @@
   position: absolute;
   bottom: 0;
   padding: 1rem 1rem 1rem 1rem;
-  text-align: justify;
+  text-align: center;
   text-justify: auto;
   margin: 1.1rem 1.3rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
