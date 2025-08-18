@@ -31,25 +31,27 @@ function App() {
   }, []);
 
   return (
-    <div id="container">
-      {!isGameStarted ? (
-        <LoginPage
-          difficulty={difficulty}
-          setDifficulty={setDifficulty}
-          setPlayerInfo={setPlayerInfo}
-          playerInfo={playerInfo}
-          setIsGameStarted={setIsGameStarted}
-        />
-      ) : (
-        <GamePage
-          playerInfo={playerInfo}
-          setPlayerInfo={setPlayerInfo}
-          cardsData={cardsData}
-          difficulty={difficulty}
-          setDifficulty={setDifficulty}
-        />
-      )}
-    </div>
+    <>
+      <div id="container">
+        {!isGameStarted ? (
+          <LoginPage
+            difficulty={difficulty}
+            setDifficulty={setDifficulty}
+            setPlayerInfo={setPlayerInfo}
+            playerInfo={playerInfo}
+            setIsGameStarted={setIsGameStarted}
+          />
+        ) : (
+          <GamePage
+            playerInfo={playerInfo}
+            setPlayerInfo={setPlayerInfo}
+            cardsData={cardsData}
+            difficulty={difficulty}
+            setDifficulty={setDifficulty}
+          />
+        )}
+      </div>
+    </>
   );
 }
 

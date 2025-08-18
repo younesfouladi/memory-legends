@@ -62,3 +62,64 @@
 .login-form .choose-difficulty div button {
   cursor: pointer;
 }
+
+.login-form .saved-users {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  padding: 1rem 6rem;
+  background-color: #1c111b;
+  align-items: center;
+  margin: 2rem 5rem 0 5rem;
+}
+
+.login-form .saved-users img {
+  width: 80px;
+  border: 2px solid #c9af3b;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+.login-form .saved-users p {
+  text-transform: uppercase;
+  color: #8f538c;
+  font-size: 1.3rem;
+}
+
+.login-form .saved-users button {
+  color: #d55022;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 530px) {
+  .login-form .saved-users {
+    padding: 1rem 5rem;
+    margin: 2rem 3rem 0 3rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .login-container .login-form {
+    gap: 1rem;
+  }
+
+  .login-form .saved-users {
+    padding: 1rem 3rem;
+    margin: 1rem 3rem 0 3rem;
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .login-form .saved-users {
+    padding: 1rem 2rem;
+    margin: 2rem 2rem 0 2rem;
+  }
+
+  .login-form .choose-difficulty div {
+    padding: 1rem 1.5rem;
+  }
+}

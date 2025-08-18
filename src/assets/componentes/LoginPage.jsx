@@ -1,6 +1,6 @@
 import "../../assets/styles/LoginPage.css";
 import { ChevronsRight, ChevronsLeft } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -69,6 +69,7 @@ export default function LoginPage({
       }
     }
   };
+  const [savedUser, setSavedUser] = useState(Object.keys(localStorage));
 
   return (
     <div className="login-container">
@@ -77,15 +78,30 @@ export default function LoginPage({
         <h2>A Memory Challenge</h2>
       </div>
       <div className="login-form">
-        <input
-          type="text"
-          id="getPlayerName"
-          placeholder="Enter player's name"
-          onChange={(e) => {
-            setPlayerInfo({ ...playerInfo, name: e.target.value });
-          }}
-        />
-
+        {localStorage.length > 0 ? (
+          <div className="saved-users">
+            <img
+              src="../../images/test-profile.webp"
+              alt="saved user picture"
+            />
+            <p>{savedUser}</p>
+            <button
+              onClick={() => setSavedUser(localStorage.clear())}
+              className="cursor-pointer"
+            >
+              Sign Out
+            </button>
+          </div>
+        ) : (
+          <input
+            type="text"
+            id="getPlayerName"
+            placeholder="Enter player's name"
+            onChange={(e) => {
+              setPlayerInfo({ ...playerInfo, name: e.target.value });
+            }}
+          />
+        )}
         <div className="choose-difficulty">
           <h3>Choose Difficulty</h3>
           <div className="change-dif-button btn green-button">
@@ -115,7 +131,7 @@ export default function LoginPage({
         <button
           className="start-game btn orange-button"
           onClick={() =>
-            playerInfo.name.trim() !== ""
+            playerInfo.name.trim() !== "" || savedUser !== undefined
               ? setIsGameStarted(true)
               : alert("Player's name can't be empty")
           }
