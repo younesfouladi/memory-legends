@@ -17,4 +17,5 @@ body {
   font-family: var(--primary-font);
   color: var(--white-color);
   user-select: none;
+  background-color: black;
 }

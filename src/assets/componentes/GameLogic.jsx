@@ -14,6 +14,7 @@ export default function gameLogic(prev, clickedId, count) {
     ...prev,
     clickedCards: [...prev.clickedCards, clickedId],
     points: newPoints,
+    record: isWon ? prev.record + 1 : prev.record,
     gameOver: isWon,
     result: isWon ? "won" : prev.result,
   };

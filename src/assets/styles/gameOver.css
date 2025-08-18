@@ -1,8 +1,60 @@
 .gameover-container {
-  background-color: rgb(26, 41, 68);
+  background: url("../images/background/main-background.webp");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.gameover-container > div {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-direction: column;
+}
+
+.gameover-container > div > img {
+  max-width: clamp(20rem, 50vw, 60vw);
+}
+
+.gameover-container .gameover-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.gameover-container .gameover-actions button.purple-btn {
+  background: url("../../../images/elements/purple-button.webp");
+  background-size: 100% 100%;
+  padding: 2rem 4rem;
+  text-shadow: 0px 0px 5px black;
+  font-size: 1.5rem;
+}
+
+.gameover-container .gameover-actions button.restart-game {
+  color: #f1c571;
+}
+
+.gameover-container .gameover-actions button.change-difficulty {
+  color: #9e9cff;
+}
+
+.gameover-container .gameover-actions button.save-game {
+  color: #ececec;
+}
+
+@media screen and (max-width: 470px) {
+  .gameover-container .gameover-actions button.purple-btn {
+    background: url("../../../images/elements/purple-button.webp");
+    background-size: 100% 100%;
+    padding: 2rem 4rem;
+    font-size: 1.3rem;
+  }
 }
