@@ -9,6 +9,7 @@
   padding: 3rem;
   justify-content: space-between;
   align-items: center;
+  row-gap: 2rem;
 }
 
 .game-container header {
@@ -127,16 +128,16 @@
   height: 100%;
 }
 
-.game-container .card-container {
+.game-container .card-container,
+.card-container.easy {
   display: grid;
-  grid-template-columns: minmax(200px, 300px) auto;
-  grid-auto-flow: column;
-  gap: 2rem;
+  grid-template-columns: repeat(3, minmax(150px, 300px));
   align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .game-container .card-container .card {
-  /* max-width: 300px; */
   height: auto;
   cursor: pointer;
 }
@@ -193,5 +194,470 @@
   }
   .game-container header .player-container p {
     padding-right: 4rem;
+  }
+}
+
+/* Some Cool Style for Cards */
+/* Easy */
+.card-container.easy .card:first-child {
+  transform: rotate(-10deg);
+  transform-origin: bottom right;
+}
+
+.card-container.easy .card:last-child {
+  transform: rotate(10deg);
+  transform-origin: bottom left;
+}
+
+/* Normal */
+.card-container.normal {
+  grid-template-columns: repeat(5, minmax(150px, 250px));
+}
+
+.card-container.normal .card {
+  margin-left: -2rem;
+}
+
+.card-container.normal .card:first-child {
+  transform: rotate(-20deg) translateY(-0.5rem);
+  transform-origin: bottom right;
+}
+
+.card-container.normal .card:last-child {
+  transform: rotate(20deg) translateY(-0.5rem);
+  transform-origin: bottom left;
+}
+
+.card-container.normal .card:nth-child(2) {
+  transform: rotate(-10deg);
+  transform-origin: bottom left;
+}
+
+.card-container.normal .card:nth-child(4) {
+  transform: rotate(10deg);
+  transform-origin: bottom right;
+}
+
+.card-container.normal .card:nth-child(3) {
+  transform: translateY(-3.3rem);
+}
+
+/* Hard */
+.card-container.hard {
+  grid-template-columns: repeat(5, minmax(150px, 250px));
+}
+
+.card-container.hard .card {
+  margin-left: -2rem;
+}
+
+.card-container.hard .card:first-child {
+  transform: rotate(-20deg);
+  transform-origin: bottom right;
+}
+
+.card-container.hard .card:last-child {
+  transform: rotate(20deg);
+  transform-origin: bottom left;
+}
+
+.card-container.hard .card:nth-child(2) {
+  transform: rotate(-15deg);
+  transform-origin: bottom left;
+}
+
+.card-container.hard .card:nth-child(6) {
+  transform: rotate(10deg);
+  transform-origin: bottom right;
+  position: absolute;
+  max-width: 250px;
+  right: 30%;
+  bottom: -10%;
+}
+
+.card-container.hard .card:nth-child(3) {
+  transform: translateY(-30%);
+}
+
+.card-container.hard .card:nth-child(5) {
+  transform: rotate(-10deg);
+  transform-origin: bottom left;
+  position: absolute;
+  max-width: 250px;
+  left: 30%;
+  bottom: -10%;
+}
+
+.card-container.hard .card:nth-child(4) {
+  transform: rotate(15deg);
+  transform-origin: bottom right;
+}
+
+/* Responsive */
+@media screen and (max-width: 1500px) {
+  .card-container.normal {
+    grid-template-columns: repeat(5, minmax(150px, 200px));
+    margin: 0 3rem;
+  }
+
+  .card-container.hard {
+    grid-template-columns: repeat(5, minmax(150px, 200px));
+    margin-bottom: 2rem;
+    padding: 0 3rem;
+  }
+
+  .card-container.hard .card {
+    margin-left: -2rem;
+  }
+
+  .card-container.hard .card:nth-child(5),
+  .card-container.hard .card:nth-child(6) {
+    max-width: 210px;
+    bottom: -15%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .game-container {
+    padding: 2rem;
+  }
+
+  .card-container.normal {
+    grid-template-columns: repeat(5, minmax(150px, 200px));
+    margin: 0;
+  }
+
+  .card-container.normal .card {
+    max-width: 200px;
+    position: fixed;
+  }
+
+  .card-container.normal .card:first-child {
+    transform: rotate(-5deg);
+    left: 10%;
+    top: 20%;
+  }
+  .card-container.normal .card:nth-child(2) {
+    transform: rotate(5deg);
+    right: 8%;
+    top: 20%;
+  }
+  .card-container.normal .card:nth-child(3) {
+    left: 50%;
+    transform: translateX(-40%);
+  }
+
+  .card-container.normal .card:nth-child(4) {
+    left: 20%;
+    transform: rotate(-5deg);
+    bottom: 25%;
+  }
+
+  .card-container.normal .card:nth-child(5) {
+    right: 20%;
+    transform: rotate(5deg);
+    bottom: 25%;
+  }
+
+  .card-container.hard {
+    grid-template-columns: repeat(4, minmax(150px, 170px));
+    margin-bottom: 0;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .game-container .card-container.hard .card {
+    position: static;
+    transform: rotate(0);
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .card-container.normal {
+    grid-template-columns: repeat(5, minmax(100px, 200px));
+  }
+
+  .card-container.normal .card {
+    max-width: 170px;
+  }
+
+  .card-container.normal .card:first-child {
+    transform: rotate(-5deg);
+    left: 15%;
+  }
+
+  .card-container.normal .card:nth-child(3) {
+    transform: translateX(-30%);
+  }
+
+  .card-container.normal .card:nth-child(4) {
+    bottom: 20%;
+  }
+
+  .card-container.normal .card:nth-child(5) {
+    right: 15%;
+    bottom: 20%;
+  }
+
+  .card-container.hard {
+    grid-template-columns: repeat(4, minmax(130px, 150px));
+
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .game-container .card-container.easy .card {
+    max-width: 200px;
+    position: absolute;
+  }
+  .game-container .card-container.easy .card:first-child {
+    right: 5%;
+    transform: translateX(0%);
+    bottom: 0%;
+  }
+  .game-container .card-container.easy .card:last-child {
+    left: 5%;
+    transform: translateX(0);
+    top: 0%;
+  }
+  .game-container .card-container.easy .card:nth-child(2) {
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 2;
+  }
+  .card-container.normal .card:nth-child(2) {
+    right: 12%;
+  }
+
+  .game-container .card-container.hard .card {
+    position: absolute;
+    max-width: 160px;
+  }
+
+  .game-container .card-container.hard .card:first-child {
+    top: 0;
+    left: 5%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(2) {
+    top: 0;
+    right: 5%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(3) {
+    top: 25%;
+    left: 10%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(4) {
+    top: 25%;
+    right: 10%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(5) {
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .game-container .card-container.hard .card:nth-child(6) {
+    bottom: 0;
+    left: 15%;
+  }
+
+  .game-container .card-container.hard .card:last-child {
+    bottom: 0;
+    right: 15%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .game-container .card-container.hard .card {
+    position: absolute;
+    max-width: 150px;
+  }
+
+  .game-container .card-container.hard .card:first-child {
+    top: 0;
+    left: 10%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(2) {
+    top: 0;
+    right: 10%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(3) {
+    top: 30%;
+    left: 10%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(4) {
+    top: 25%;
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .game-container .card-container.easy .card {
+    max-width: 180px;
+  }
+  .game-container .card-container.easy .card:first-child {
+    right: 10%;
+  }
+  .card-container.normal {
+    grid-template-columns: repeat(5, minmax(80px, 200px));
+  }
+  .card-container.normal .card {
+    max-width: 160px;
+  }
+
+  .game-container .card-container.hard .card {
+    position: absolute;
+    max-width: 140px;
+  }
+
+  .game-container .card-container.hard .card:first-child {
+    top: 0;
+    left: 20%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(2) {
+    top: 0;
+    right: 20%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(3) {
+    top: 30%;
+    left: 15%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(4) {
+    top: 25%;
+    right: 15%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(5) {
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .game-container .card-container.hard .card:nth-child(6) {
+    left: 20%;
+  }
+
+  .game-container .card-container.hard .card:last-child {
+    right: 20%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .game-container .card-container.easy .card {
+    max-width: 170px;
+  }
+  .game-container .card-container.easy .card:last-child {
+    left: 10%;
+    transform: translateX(0);
+    top: 5%;
+  }
+  .game-container .card-container.easy .card:first-child {
+    right: 10%;
+    bottom: 0%;
+  }
+
+  .game-container .card-container.normal .card {
+    transform: rotate(0);
+  }
+
+  .card-container.normal .card:first-child {
+    left: 10%;
+  }
+
+  .card-container.normal .card:nth-child(2) {
+    right: 10%;
+  }
+
+  .card-container.normal .card:nth-child(3) {
+    transform: translateX(-40%);
+  }
+
+  .card-container.normal .card:nth-child(4) {
+    left: 10%;
+  }
+
+  .card-container.normal .card:last-child {
+    right: 10%;
+  }
+
+  .game-container .card-container.hard .card {
+    position: absolute;
+    max-width: 140px;
+  }
+
+  .game-container .card-container.hard .card:nth-child(3) {
+    left: 20%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(4) {
+    right: 20%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(5) {
+    bottom: 35%;
+  }
+
+  .game-container .card-container.hard .card:nth-child(6) {
+    left: 20%;
+  }
+
+  .game-container .card-container.hard .card:last-child {
+    right: 20%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .game-container .card-container.easy .card {
+    max-width: 150px;
+  }
+  .game-container .card-container.easy .card:last-child {
+    left: 20%;
+    transform: translateX(0);
+    top: 0%;
+  }
+  .game-container .card-container.easy .card:first-child {
+    right: none;
+    left: 20%;
+    bottom: 0%;
+  }
+  .game-container .card-container.easy .card:nth-child(2) {
+    transform: translateX(-5%);
+    left: none;
+  }
+
+  .card-container.normal .card:first-child {
+    top: 15%;
+    left: 13%;
+    transform: rotate(-2deg);
+  }
+
+  .card-container.normal .card:nth-child(2) {
+    top: 15%;
+    right: 15%;
+    transform: rotate(2deg);
+  }
+
+  .card-container.normal .card:nth-child(4) {
+    bottom: 25%;
+    left: 13%;
+    transform: rotate(-2deg);
+  }
+
+  .card-container.normal .card:last-child {
+    bottom: 25%;
+    right: 15%;
+    transform: rotate(2deg);
   }
 }

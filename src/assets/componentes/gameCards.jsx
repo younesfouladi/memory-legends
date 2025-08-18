@@ -52,9 +52,19 @@ function GenerateCards({
     }
     setSelectedCard(picked);
   }, [playerInfo.points, count, cardsData]);
-
+  // card-container
   return (
-    <div className="card-container">
+    <div
+      className={
+        difficulty === "easy"
+          ? "card-container easy"
+          : difficulty === "normal"
+          ? "card-container normal"
+          : difficulty === "hard"
+          ? "card-container hard"
+          : null
+      }
+    >
       {selectedCard.map((card) => {
         return (
           <Card

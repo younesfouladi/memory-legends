@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import GamePage from "./assets/componentes/gamePage.jsx";
 
 function App() {
-  const [difficulty, setDifficulty] = useState("easy");
+  const [difficulty, setDifficulty] = useState("normal");
   const [playerInfo, setPlayerInfo] = useState({
     name: "",
     points: 0,
