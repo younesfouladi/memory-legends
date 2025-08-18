@@ -15,15 +15,13 @@ export default function GameOver({
       result: "",
       clickedCards: [],
     }));
-
-    if (localStorage.length > 0 && localStorage !== undefined) {
-      localStorage.clear();
-      localStorage.setItem(`${playerInfo.name}`, JSON.stringify(playerInfo));
-    } else {
-      localStorage.setItem(`${playerInfo.name}`, JSON.stringify(playerInfo));
-    }
   };
-
+  if (localStorage.length > 0 && localStorage !== undefined) {
+    localStorage.clear();
+    localStorage.setItem(`${playerInfo.name}`, JSON.stringify(playerInfo));
+  } else {
+    localStorage.setItem(`${playerInfo.name}`, JSON.stringify(playerInfo));
+  }
   const handleChangeDiff = (e) => {
     if (e.target.classList.contains("next-difficulty")) {
       switch (difficulty) {
@@ -84,14 +82,6 @@ export default function GameOver({
           >
             Restart Game
           </button>
-          {/* {
-            <button
-              className="btn purple-btn save-game"
-              onClick={() => handleUpdateStorage()}
-            >
-              Save Game
-            </button>
-          } */}
         </div>
       </div>
     </div>

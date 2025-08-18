@@ -70,7 +70,21 @@ export default function LoginPage({
     }
   };
   const [savedUser, setSavedUser] = useState(Object.keys(localStorage));
-
+  useEffect(() => {
+    if (localStorage.length > 0) {
+      const data = JSON.parse(localStorage.getItem(savedUser));
+      setPlayerInfo((prev) => ({
+        ...prev,
+        name: data.name,
+        record: data.record,
+      }));
+    } else {
+      setPlayerInfo((prev) => ({
+        ...prev,
+        record: 0,
+      }));
+    }
+  }, [savedUser, setPlayerInfo]);
   return (
     <div className="login-container">
       <div className="login-header">
