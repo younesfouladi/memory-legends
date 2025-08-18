@@ -77,6 +77,8 @@
   right: 0;
   width: 150px;
   transform-origin: top;
+  z-index: 10;
+  backdrop-filter: blur(5px);
 }
 
 .game-container header .sound-setting ul li {
