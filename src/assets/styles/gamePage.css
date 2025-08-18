@@ -128,13 +128,15 @@
 }
 
 .game-container .card-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) auto;
+  grid-auto-flow: column;
   gap: 2rem;
   align-items: center;
 }
 
 .game-container .card-container .card {
-  max-width: 300px;
+  /* max-width: 300px; */
   height: auto;
   cursor: pointer;
 }

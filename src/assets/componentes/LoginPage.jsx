@@ -2,6 +2,7 @@ import "../../assets/styles/LoginPage.css";
 import { ChevronsRight, ChevronsLeft } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function LoginPage({
   difficulty,
@@ -24,12 +25,6 @@ export default function LoginPage({
 
     gsap.fromTo(".login-header", { y: -100 }, { y: 0, duration: 1 });
 
-    // difficulty change Animation
-    gsap.fromTo(
-      difRef.current,
-      { y: -10, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5 }
-    );
     // Login Form Entry Animation
     gsap.fromTo(
       ".login-form",
@@ -37,6 +32,15 @@ export default function LoginPage({
       { y: 0, opacity: 1, duration: 1 }
     );
   }, []);
+
+  // difficulty change Animation
+  useGSAP(() => {
+    gsap.fromTo(
+      difRef.current,
+      { y: -10, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5 }
+    );
+  }, [difficulty]);
 
   const handleChangeDiff = (e) => {
     if (e.target.classList.contains("next-difficulty")) {
