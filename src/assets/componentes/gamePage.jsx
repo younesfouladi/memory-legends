@@ -9,11 +9,17 @@ export default function GamePage({
   setPlayerInfo,
   cardsData,
   difficulty,
+  setDifficulty,
 }) {
   return (
     <>
       {playerInfo.gameOver && (
-        <GameOver playerInfo={playerInfo} setPlayerInfo={setPlayerInfo} />
+        <GameOver
+          playerInfo={playerInfo}
+          setPlayerInfo={setPlayerInfo}
+          difficulty={difficulty}
+          setDifficulty={setDifficulty}
+        />
       )}
       {!playerInfo.gameOver && (
         <div className="game-container">

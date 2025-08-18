@@ -46,6 +46,7 @@ function App() {
           setPlayerInfo={setPlayerInfo}
           cardsData={cardsData}
           difficulty={difficulty}
+          setDifficulty={setDifficulty}
         />
       )}
     </div>

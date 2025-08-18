@@ -57,4 +57,20 @@
     padding: 2rem 4rem;
     font-size: 1.3rem;
   }
+
+  #container .gameover-container .gameover-actions div.green-button h3 {
+    font-size: 1.3rem;
+  }
+}
+
+#container .gameover-container .gameover-actions div.green-button {
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+
+#container .gameover-container .gameover-actions div.green-button h3 {
+  font-size: 1.5rem;
 }
