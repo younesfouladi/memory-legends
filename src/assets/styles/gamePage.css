@@ -144,6 +144,7 @@
 
 .game-container .card-container .card .front {
   position: relative;
+  backface-visibility: hidden;
 }
 
 .game-container .card-container .card .front .card-details {
@@ -156,11 +157,17 @@
   padding: 1rem 1rem 1rem 1rem;
   text-align: center;
   text-justify: auto;
-  margin: 1.1rem 1.3rem;
+  margin: 5%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
   backdrop-filter: blur(2px);
   animation: slide-in 1 0.5s alternate;
   transform-origin: bottom;
+  height: 60%;
+  overflow: hidden;
+}
+
+.card .card-details p {
+  height: 8ch;
 }
 
 .game-container .card-container .card:hover .card-details {
@@ -201,12 +208,14 @@
 /* Easy */
 .card-container.easy .card:first-child {
   transform: rotate(-10deg);
-  transform-origin: bottom right;
 }
 
 .card-container.easy .card:last-child {
   transform: rotate(10deg);
-  transform-origin: bottom left;
+}
+
+.card-container.easy .card:nth-child(2) {
+  transform: translateY(-1.5rem);
 }
 
 /* Normal */
@@ -220,22 +229,18 @@
 
 .card-container.normal .card:first-child {
   transform: rotate(-20deg) translateY(-0.5rem);
-  transform-origin: bottom right;
 }
 
 .card-container.normal .card:last-child {
   transform: rotate(20deg) translateY(-0.5rem);
-  transform-origin: bottom left;
 }
 
 .card-container.normal .card:nth-child(2) {
   transform: rotate(-10deg);
-  transform-origin: bottom left;
 }
 
 .card-container.normal .card:nth-child(4) {
   transform: rotate(10deg);
-  transform-origin: bottom right;
 }
 
 .card-container.normal .card:nth-child(3) {
@@ -253,22 +258,18 @@
 
 .card-container.hard .card:first-child {
   transform: rotate(-20deg);
-  transform-origin: bottom right;
 }
 
 .card-container.hard .card:last-child {
   transform: rotate(20deg);
-  transform-origin: bottom left;
 }
 
 .card-container.hard .card:nth-child(2) {
   transform: rotate(-15deg);
-  transform-origin: bottom left;
 }
 
 .card-container.hard .card:nth-child(6) {
   transform: rotate(10deg);
-  transform-origin: bottom right;
   position: absolute;
   max-width: 250px;
   right: 30%;
@@ -281,7 +282,6 @@
 
 .card-container.hard .card:nth-child(5) {
   transform: rotate(-10deg);
-  transform-origin: bottom left;
   position: absolute;
   max-width: 250px;
   left: 30%;
@@ -290,7 +290,6 @@
 
 .card-container.hard .card:nth-child(4) {
   transform: rotate(15deg);
-  transform-origin: bottom right;
 }
 
 /* Responsive */
@@ -318,6 +317,12 @@
 }
 
 @media screen and (max-width: 900px) {
+  .card h3 {
+    font-size: 1rem;
+  }
+  .card p {
+    font-size: 0.8rem;
+  }
   .game-container {
     padding: 2rem;
   }
@@ -329,18 +334,18 @@
 
   .card-container.normal .card {
     max-width: 200px;
-    position: fixed;
+    position: absolute;
   }
 
   .card-container.normal .card:first-child {
     transform: rotate(-5deg);
     left: 10%;
-    top: 20%;
+    top: 0;
   }
   .card-container.normal .card:nth-child(2) {
     transform: rotate(5deg);
     right: 8%;
-    top: 20%;
+    top: 0%;
   }
   .card-container.normal .card:nth-child(3) {
     left: 50%;
@@ -350,13 +355,13 @@
   .card-container.normal .card:nth-child(4) {
     left: 20%;
     transform: rotate(-5deg);
-    bottom: 25%;
+    bottom: 0;
   }
 
   .card-container.normal .card:nth-child(5) {
     right: 20%;
     transform: rotate(5deg);
-    bottom: 25%;
+    bottom: 0;
   }
 
   .card-container.hard {
@@ -392,12 +397,12 @@
   }
 
   .card-container.normal .card:nth-child(4) {
-    bottom: 20%;
+    bottom: 0;
   }
 
   .card-container.normal .card:nth-child(5) {
     right: 15%;
-    bottom: 20%;
+    bottom: 0%;
   }
 
   .card-container.hard {
@@ -573,23 +578,23 @@
   }
 
   .card-container.normal .card:first-child {
-    left: 10%;
+    left: 15%;
   }
 
   .card-container.normal .card:nth-child(2) {
-    right: 10%;
+    right: 5%;
   }
 
   .card-container.normal .card:nth-child(3) {
-    transform: translateX(-40%);
+    transform: translateX(-30%);
   }
 
   .card-container.normal .card:nth-child(4) {
-    left: 10%;
+    left: 15%;
   }
 
   .card-container.normal .card:last-child {
-    right: 10%;
+    right: 5%;
   }
 
   .game-container .card-container.hard .card {
@@ -638,26 +643,22 @@
   }
 
   .card-container.normal .card:first-child {
-    top: 15%;
-    left: 13%;
+    left: 20%;
     transform: rotate(-2deg);
   }
 
   .card-container.normal .card:nth-child(2) {
-    top: 15%;
-    right: 15%;
+    right: 12%;
     transform: rotate(2deg);
   }
 
   .card-container.normal .card:nth-child(4) {
-    bottom: 25%;
-    left: 13%;
+    left: 20%;
     transform: rotate(-2deg);
   }
 
   .card-container.normal .card:last-child {
-    bottom: 25%;
-    right: 15%;
+    right: 12%;
     transform: rotate(2deg);
   }
 }
