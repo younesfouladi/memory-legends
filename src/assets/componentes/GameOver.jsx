@@ -1,12 +1,26 @@
 import "../styles/gameOver.css";
 
-export default function GameOver({ playerInfo }) {
+export default function GameOver({ playerInfo, setPlayerInfo }) {
+  const handleRestartGame = () => {
+    setPlayerInfo((prev) => ({
+      ...prev,
+      points: 0,
+      gameOver: false,
+      result: "",
+      clickedCards: [],
+    }));
+  };
   return (
     <div className="gameover-container">
       <div>
         {playerInfo.result === "won" ? <WinnerSign /> : <LoserSign />}
         <div className="gameover-actions">
-          <button className="btn purple-btn restart-game">Restart Game</button>
+          <button
+            className="btn purple-btn restart-game"
+            onClick={() => handleRestartGame()}
+          >
+            Restart Game
+          </button>
           <button className="btn purple-btn change-difficulty">
             Change Difficulty
           </button>

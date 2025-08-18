@@ -12,7 +12,9 @@ export default function GamePage({
 }) {
   return (
     <>
-      {playerInfo.gameOver && <GameOver playerInfo={playerInfo} />}
+      {playerInfo.gameOver && (
+        <GameOver playerInfo={playerInfo} setPlayerInfo={setPlayerInfo} />
+      )}
       {!playerInfo.gameOver && (
         <div className="game-container">
           <GameHeader playerInfo={playerInfo} />
