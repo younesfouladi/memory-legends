@@ -97,10 +97,10 @@ Sound effects are seamlessly integrated using the **useSound** library, enhancin
 
 ## 📸 Screenshots
 
-![Game Screenshot](https://github.com/younesfouladi/memory-legends/public/sc1.jpg)  
+![Game Screenshot](https://github.com/younesfouladi/memory-legends/blob/main/public/sc1.jpg)  
 _Experience the mythic design, smooth animations, and immersive 3D hover effects!_
 
-![Game Screenshot](https://github.com/younesfouladi/memory-legends/public/sc2.jpg)  
+![Game Screenshot](https://github.com/younesfouladi/memory-legends/blob/main/public/sc2.jpg)  
 _Experience the mythic design, smooth animations, and immersive 3D hover effects!_
 
 ---
