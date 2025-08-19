@@ -4,6 +4,8 @@ import "./assets/styles/utilities.css";
 import LoginPage from "./assets/componentes/LoginPage.jsx";
 import { useEffect, useState } from "react";
 import GamePage from "./assets/componentes/gamePage.jsx";
+import menuClick from "../public/sounds/click.mp3";
+import useSound from "use-sound";
 
 function App() {
   const [difficulty, setDifficulty] = useState("normal");
@@ -17,6 +19,9 @@ function App() {
   });
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [cardsData, setCardsData] = useState([]);
+
+  const [muteClick, setMuteClick] = useState(false);
+  const [playClickSound] = useSound(menuClick, { volume: !muteClick ? 1 : 0 });
 
   useEffect(() => {
     (async function () {
@@ -40,6 +45,7 @@ function App() {
             setPlayerInfo={setPlayerInfo}
             playerInfo={playerInfo}
             setIsGameStarted={setIsGameStarted}
+            playClickSound={playClickSound}
           />
         ) : (
           <GamePage
@@ -48,6 +54,9 @@ function App() {
             cardsData={cardsData}
             difficulty={difficulty}
             setDifficulty={setDifficulty}
+            playClickSound={playClickSound}
+            muteClick={muteClick}
+            setMuteClick={setMuteClick}
           />
         )}
       </div>

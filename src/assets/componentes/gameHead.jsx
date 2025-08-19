@@ -2,10 +2,18 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { Settings, Volume2, VolumeOff } from "lucide-react";
 
-export default function GameHeader({ playerInfo }) {
+export default function GameHeader({
+  playerInfo,
+  isMusicMuted,
+  setIsMusicMuted,
+  playClickSound,
+  muteClick,
+  setMuteClick,
+}) {
   const soundDrawerRef = useRef(null);
 
   function handleOpenSoundDrawer(e) {
+    playClickSound();
     if (soundDrawerRef.current.style.display === "none") {
       e.target.style.transform = "rotate(-45deg)";
       soundDrawerRef.current.style.display = "flex";
@@ -27,7 +35,6 @@ export default function GameHeader({ playerInfo }) {
       });
     }
   }
-
   return (
     <header>
       <div className="player-container">
@@ -44,11 +51,11 @@ export default function GameHeader({ playerInfo }) {
           <Settings size={36} color="#e2e3dd" className="pointer-events-none" />
         </button>
         <ul className="soundlist-container" ref={soundDrawerRef}>
-          <li role="button">
-            Music <Volume2 />
+          <li role="button" onClick={() => setIsMusicMuted(!isMusicMuted)}>
+            Music {isMusicMuted ? <Volume2 /> : <VolumeOff color="red" />}
           </li>
-          <li role="button">
-            Click <VolumeOff color="red" />
+          <li role="button" onClick={() => setMuteClick(!muteClick)}>
+            Click {!muteClick ? <Volume2 /> : <VolumeOff color="red" />}
           </li>
         </ul>
       </div>

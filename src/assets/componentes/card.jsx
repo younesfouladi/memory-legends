@@ -3,6 +3,8 @@ import "atropos/css";
 import Atropos from "atropos/react";
 import gameLogic from "./GameLogic.jsx";
 import { useState } from "react";
+import useSound from "use-sound";
+import CardClickSound from "../../../public/sounds/cardClick.mp3";
 
 export default function Card({
   id,
@@ -11,13 +13,14 @@ export default function Card({
   imgSrc,
   showBackofCard,
   setShowBackofCard,
-  playerInfo,
   setPlayerInfo,
   count,
 }) {
   const [isAnimActive, setIsAnimActive] = useState(false);
+  const [CardClick] = useSound(CardClickSound);
 
   function handleCardClick(e) {
+    CardClick();
     if (isAnimActive) return;
     setIsAnimActive(true);
     // Animations

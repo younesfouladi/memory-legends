@@ -10,6 +10,7 @@ export default function LoginPage({
   playerInfo,
   setPlayerInfo,
   setIsGameStarted,
+  playClickSound,
 }) {
   const difRef = useRef(null);
 
@@ -100,7 +101,11 @@ export default function LoginPage({
             />
             <p>{savedUser}</p>
             <button
-              onClick={() => setSavedUser(localStorage.clear())}
+              onClick={() => {
+                setSavedUser("");
+                localStorage.clear();
+                setPlayerInfo({ ...playerInfo, name: "" });
+              }}
               className="cursor-pointer"
             >
               Sign Out
@@ -116,7 +121,7 @@ export default function LoginPage({
             }}
           />
         )}
-        <div className="choose-difficulty">
+        <div className="choose-difficulty" onClick={playClickSound}>
           <h3>Choose Difficulty</h3>
           <div className="change-dif-button btn green-button">
             <button
@@ -144,8 +149,9 @@ export default function LoginPage({
         </div>
         <button
           className="start-game btn orange-button"
+          onMouseDown={playClickSound}
           onClick={() =>
-            playerInfo.name.trim() !== "" || savedUser !== undefined
+            playerInfo.name.trim() !== "" || localStorage.length > 0
               ? setIsGameStarted(true)
               : alert("Player's name can't be empty")
           }

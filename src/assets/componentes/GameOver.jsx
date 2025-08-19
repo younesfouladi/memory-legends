@@ -1,12 +1,20 @@
 import "../styles/gameOver.css";
 import { ChevronsRight, ChevronsLeft } from "lucide-react";
+import useSound from "use-sound";
+import gameOverSound from "../../../public/sounds/GameOver.mp3";
+import { useEffect } from "react";
 
 export default function GameOver({
   playerInfo,
   setPlayerInfo,
   difficulty,
   setDifficulty,
+  playClickSound,
 }) {
+  const [playOver] = useSound(gameOverSound);
+  useEffect(() => {
+    playOver();
+  }, [playOver]);
   const handleRestartGame = () => {
     setPlayerInfo((prev) => ({
       ...prev,
@@ -55,7 +63,10 @@ export default function GameOver({
       <div>
         {playerInfo.result === "won" ? <WinnerSign /> : <LoserSign />}
         <div className="gameover-actions">
-          <div className="change-dif-button btn green-button">
+          <div
+            className="change-dif-button btn green-button"
+            onClick={playClickSound}
+          >
             <button
               className="prvious-difficulty btn"
               onClick={(e) => handleChangeDiff(e)}
@@ -78,6 +89,7 @@ export default function GameOver({
           </div>
           <button
             className="btn purple-btn restart-game"
+            onMouseDown={playClickSound}
             onClick={() => handleRestartGame()}
           >
             Restart Game
