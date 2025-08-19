@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
-import { Settings, Volume2, VolumeOff } from "lucide-react";
+import { Settings, Volume2, VolumeOff, Github } from "lucide-react";
 
 export default function GameHeader({
   playerInfo,
@@ -57,6 +57,12 @@ export default function GameHeader({
           <li role="button" onClick={() => setMuteClick(!muteClick)}>
             Click {!muteClick ? <Volume2 /> : <VolumeOff color="red" />}
           </li>
+          <a className="rounded-2xl p-1 bg-blue-950 flex flex-col items-center cursor-pointer text-sm hover:bg-black transition-all">
+            Younes Fouladi
+            <p>
+              <Github size={16} />
+            </p>
+          </a>
         </ul>
       </div>
     </header>
