@@ -4,7 +4,7 @@ import Atropos from "atropos/react";
 import gameLogic from "./GameLogic.jsx";
 import { useState } from "react";
 import useSound from "use-sound";
-import CardClickSound from "../../../public/sounds/cardClick.mp3";
+import CardClickSound from "/src/sounds/cardClick.mp3";
 
 export default function Card({
   id,

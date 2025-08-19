@@ -4,7 +4,7 @@ import "./assets/styles/utilities.css";
 import LoginPage from "./assets/componentes/LoginPage.jsx";
 import { useEffect, useState } from "react";
 import GamePage from "./assets/componentes/gamePage.jsx";
-import menuClick from "../public/sounds/click.mp3";
+import menuClick from "/src/sounds/click.mp3";
 import useSound from "use-sound";
 
 function App() {

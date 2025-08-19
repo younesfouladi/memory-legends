@@ -4,7 +4,7 @@ import GameScorebar from "./GameScorebar.jsx";
 import GameCards from "./gameCards.jsx";
 import GameOver from "./GameOver.jsx";
 import useSound from "use-sound";
-import soundTrack from "../../../public/sounds/music.mp3";
+import soundTrack from "/src/sounds/music.mp3";
 import { useEffect, useState } from "react";
 
 export default function GamePage({

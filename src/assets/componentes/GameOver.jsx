@@ -1,7 +1,7 @@
 import "../styles/gameOver.css";
 import { ChevronsRight, ChevronsLeft } from "lucide-react";
 import useSound from "use-sound";
-import gameOverSound from "../../../public/sounds/GameOver.mp3";
+import gameOverSound from "/src/sounds/GameOver.mp3";
 import { useEffect } from "react";
 
 export default function GameOver({

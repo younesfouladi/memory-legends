@@ -584,7 +584,7 @@
   }
 
   .card-container.normal .card:nth-child(2) {
-    right: 5%;
+    right: 8%;
   }
 
   .card-container.normal .card:nth-child(3) {
@@ -596,7 +596,7 @@
   }
 
   .card-container.normal .card:last-child {
-    right: 5%;
+    right: 8%;
   }
 
   .game-container .card-container.hard .card {
